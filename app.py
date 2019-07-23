@@ -25,7 +25,11 @@ def hello():
         "<b>Visits:</b> {visits}"
     )
 
-    return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
+    return html.format(
+        name=os.getenv("NAME", "world"),
+        hostname=socket.gethostname(),
+        visits=visits
+    )
 
 
 if __name__ == "__main__":

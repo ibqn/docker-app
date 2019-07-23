@@ -16,7 +16,7 @@ docker tag friendly_hello ibqn/frientdly_hello
 push the newly created image
 ```shell
 docker push ibqn/friendly_hello
-``` 
+```
 
 ## run services as stack
 initialize a docker smarm by running
@@ -26,6 +26,10 @@ docker swarm init
 from now on you can run a load balanced services, which are named stack
 ```shell
 docker stack deploy -c docker-compose.yml friendlylab
+```
+to add a new `worker` or a manager to the swarm
+```shell
+docker swarm join-token manager # or worker
 ```
 ## take down app and the swarm
 ```shell
